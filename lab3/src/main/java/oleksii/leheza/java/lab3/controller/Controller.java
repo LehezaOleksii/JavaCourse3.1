@@ -3,9 +3,9 @@ package oleksii.leheza.java.lab3.controller;
 import java.util.Collections;
 import java.util.List;
 
-import oleksii.leheza.java.lab3.entities.AreaComparator;
-import oleksii.leheza.java.lab3.entities.ColorComparator;
 import oleksii.leheza.java.lab3.entities.Shape;
+import oleksii.leheza.java.lab3.entities.services.AreaComparator;
+import oleksii.leheza.java.lab3.entities.services.ColorComparator;
 import oleksii.leheza.java.lab3.model.Model;
 
 public class Controller {

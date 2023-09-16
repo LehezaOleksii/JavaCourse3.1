@@ -1,6 +1,8 @@
-package oleksii.leheza.java.lab3.entities;
+package oleksii.leheza.java.lab3.entities.services;
 
 import java.util.Comparator;
+
+import oleksii.leheza.java.lab3.entities.Shape;
 
 public class AreaComparator implements Comparator<Shape> {
 	@Override
