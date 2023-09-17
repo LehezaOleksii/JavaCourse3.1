@@ -20,5 +20,4 @@ public class Taxi<T extends Human> extends Car<T> {
 //			System.out.println(passenger);
 //		}
 //	}
-
 }

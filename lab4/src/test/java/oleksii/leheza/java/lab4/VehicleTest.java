@@ -73,10 +73,10 @@ class VehicleTest {
 	// police test
 	@Test
 	void policeCar_allPolicemenPassengers_policeCarWithPolicemen() {
-		List<Human> passengers = new ArrayList<>();
-		Human policeman1 = new Policeman("policeman 1", 1);
-		Human policeman2 = new Policeman("policeman 2", 2);
-		Human policeman3 = new Policeman("policeman 3", 3);
+		List<Policeman> passengers = new ArrayList<>();
+		Policeman policeman1 = new Policeman("policeman 1", 1);
+		Policeman policeman2 = new Policeman("policeman 2", 2);
+		Policeman policeman3 = new Policeman("policeman 3", 3);
 		passengers.add(policeman1);
 		passengers.add(policeman2);
 		passengers.add(policeman3);
@@ -86,21 +86,12 @@ class VehicleTest {
 
 	@Test
 	void policeCar_TooMuchPassengers_exceptionWithMessage() {
-		Human policeman1 = new Policeman("policemna 1", 1);
-		Human policeman2 = new Policeman("policeman 2", 2);
-		Vehicle<Human> policeCar = new PoliceCar(1);
+		Policeman policeman1 = new Policeman("policemna 1", 1);
+		Policeman policeman2 = new Policeman("policeman 2", 2);
+		Vehicle<Policeman> policeCar = new PoliceCar(1);
 		policeCar.getOn(policeman1);
 		assertThrows(VehicleException.class, () -> {
 			policeCar.getOn(policeman2);
-		});
-	}
-
-	@Test
-	void policeCar_NoPolicemenPassengers_exceptionWithMessage() {
-		Human human = new Human("human 1", 1);
-		Vehicle<Human> policeCar = new PoliceCar(1);
-		assertThrows(VehicleException.class, () -> {
-			policeCar.getOn(human);
 		});
 	}
 
@@ -126,15 +117,6 @@ class VehicleTest {
 		fireTruck.getOn(fireman1);
 		assertThrows(VehicleException.class, () -> {
 			fireTruck.getOn(fireman2);
-		});
-	}
-
-	@Test
-	void fireTruck_NoFiremenPassengers_exceptionWithMessage() {
-		Human human = new Human("human 1", 1);
-		Vehicle<Fireman> fireTruck = new FireTruck(1);
-		assertThrows(VehicleException.class, () -> {
-			fireTruck.getOn(human);
 		});
 	}
 

@@ -1,5 +1,6 @@
 package oleksii.leheza.java.lab4.entities.vehicle;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import oleksii.leheza.java.lab4.entities.people.Human;
@@ -8,7 +9,7 @@ import oleksii.leheza.java.lab4.exception.VehicleException;
 public abstract class Vehicle<T extends Human> {
 
 	private int maxSeatsNumber;
-	private List<T> passengers;
+	private List<T> passengers = new ArrayList<>();
 
 	public Vehicle(int maxSeatsNumber) {
 		this.maxSeatsNumber = maxSeatsNumber;
@@ -30,7 +31,7 @@ public abstract class Vehicle<T extends Human> {
 
 	public void getOn(T person) {
 		if (!passengers.contains(person)) {
-			if (maxSeatsNumber < maxSeatsNumber) {
+			if (maxSeatsNumber > passengers.size()) {
 				passengers.add(person);
 			} else {
 				throw new VehicleException("All seats are occupied");

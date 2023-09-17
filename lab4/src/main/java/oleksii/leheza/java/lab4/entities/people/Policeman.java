@@ -5,5 +5,4 @@ public class Policeman extends Human {
 	public Policeman(String name, int personId) {
 		super(name, personId);
 	}
-
 }
