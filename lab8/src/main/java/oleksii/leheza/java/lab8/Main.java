@@ -11,25 +11,10 @@ public class Main {
 		int numThreads = 4;
 		long iterations = 10000000L;
 		AtomicLong inCircle = new AtomicLong(0);
-
+		ParallelMonteCarloPi parallelMonthCarloPi = new ParallelMonteCarloPi();
 		ExecutorService executor = Executors.newFixedThreadPool(numThreads);
-
+		parallelMonthCarloPi.method(numThreads, iterations, inCircle, executor);
 		long startTime = System.currentTimeMillis();
-
-		for (int i = 0; i < numThreads; i++) {
-			executor.execute(() -> {
-				long localInCircle = 0;
-				for (long j = 0; j < iterations / numThreads; j++) {
-					double x = Math.random();
-					double y = Math.random();
-					double distance = Math.sqrt(x * x + y * y);
-					if (distance <= 1) {
-						localInCircle++;
-					}
-				}
-				inCircle.addAndGet(localInCircle);
-			});
-		}
 
 		executor.shutdown();
 		while (!executor.isTerminated()) {
