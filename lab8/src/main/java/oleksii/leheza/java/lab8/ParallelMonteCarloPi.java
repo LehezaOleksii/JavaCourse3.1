@@ -1,25 +1,41 @@
 package oleksii.leheza.java.lab8;
 
 import java.util.concurrent.ExecutorService;
+import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.atomic.AtomicLong;
 
 public class ParallelMonteCarloPi {
 
-	public int method(int numThreads, long iterations, AtomicLong inCircle, ExecutorService executor) {
+	public void calculatePi(int numThreads, long iterations, AtomicLong inCircle, ExecutorService executor) {
+		Thread[] threads = new Thread[numThreads];
+
 		for (int i = 0; i < numThreads; i++) {
-			executor.execute(() -> {
-				long localInCircle = 0;
+			threads[i] = new Thread(() -> {
+				long insideCircle = 0;
+				ThreadLocalRandom random = ThreadLocalRandom.current();
+
 				for (long j = 0; j < iterations / numThreads; j++) {
-					double x = Math.random();
-					double y = Math.random();
-					double distance = Math.sqrt(x * x + y * y);
-					if (distance <= 1) {
-						localInCircle++;
+					double x = random.nextDouble();
+					double y = random.nextDouble();
+					double distance = x * x + y * y;
+
+					if (distance <= 1.0) {
+						insideCircle++;
 					}
 				}
-				inCircle.addAndGet(localInCircle);
+
+				inCircle.addAndGet(insideCircle);
 			});
+			threads[i].start();
 		}
-		return numThreads;
+
+		for (Thread thread : threads) {
+			try {
+				thread.join();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+
 	}
 }
