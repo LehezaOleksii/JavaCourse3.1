@@ -16,7 +16,8 @@ public class Main {
 		long startTime = System.currentTimeMillis();
 		parallelMonthCarloPi.calculatePi(numThreads, iterations, inCircle, executor);
 		executor.shutdown();
-		
+		while (!executor.isTerminated()) {
+		}
 		long endTime = System.currentTimeMillis();
 		double pi = (4.0 * inCircle.get()) / iterations;
 
