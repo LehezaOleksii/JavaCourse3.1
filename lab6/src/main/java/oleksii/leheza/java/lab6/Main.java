@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-		Translator translator = new Translator();
+		Translator translator = new TranslatorWithPhrase();
 		translator.addNewWord("hello", "привіт");
 		translator.addNewWord("world", "світ");
 		String stringToTranslate = "hello world";
