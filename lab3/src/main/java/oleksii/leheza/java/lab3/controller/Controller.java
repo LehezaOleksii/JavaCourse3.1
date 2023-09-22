@@ -10,7 +10,11 @@ import oleksii.leheza.java.lab3.model.Model;
 
 public class Controller {
 
-	Model model = new Model();
+	private Model model;
+
+	public Controller() {
+		model = new Model();
+	}
 
 	public double getArea(int id) {
 		Shape shape = model.getShape(id);
@@ -50,5 +54,9 @@ public class Controller {
 		List<Shape> shapes = model.getAllShapes();
 		Collections.sort(shapes, new ColorComparator());
 		return shapes;
+	}
+
+	public Shape getShapeById(int id) {
+		return model.getShape(id);
 	}
 }

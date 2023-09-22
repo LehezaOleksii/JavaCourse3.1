@@ -10,7 +10,7 @@ import oleksii.leheza.java.lab3.entities.Triangle;
 
 public class Model {
 
-	List<Shape> shapes = new ArrayList<>();
+	private List<Shape> shapes = new ArrayList<>();
 
 	public Model() {
 		shapes.add(new Rectangle(5, 10, "Blue"));
@@ -39,7 +39,7 @@ public class Model {
 
 		for (Shape shape : shapes) {
 			String className = shape.getClass().getSimpleName();
-			if (className.equals(shapeType)) {
+			if (className.toLowerCase().equals(shapeType.toLowerCase())) {
 				filteredShapes.add(shape);
 			}
 		}

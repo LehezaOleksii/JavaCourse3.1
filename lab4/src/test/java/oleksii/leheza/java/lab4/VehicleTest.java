@@ -25,7 +25,7 @@ class VehicleTest {
 	void bus_allPasengers_busWithPassengers() {
 		List<Human> passengers = new ArrayList<>();
 		Human human = new Human("human 1", 1);
-		Human policeman = new Human("policeman 1", 2);
+		Human policeman = new Policeman("policeman 1", 2);
 		Human fireman = new Human("fireman 1", 3);
 		passengers.add(human);
 		passengers.add(policeman);
@@ -80,7 +80,7 @@ class VehicleTest {
 		passengers.add(policeman1);
 		passengers.add(policeman2);
 		passengers.add(policeman3);
-		Vehicle<Policeman> policeCar = new PoliceCar(3, passengers);
+		Vehicle<Policeman> policeCar = new PoliceCar<Policeman>(3, passengers);
 		assertEquals(passengers, policeCar.getPassengers());
 	}
 
@@ -88,23 +88,25 @@ class VehicleTest {
 	void policeCar_TooMuchPassengers_exceptionWithMessage() {
 		Policeman policeman1 = new Policeman("policemna 1", 1);
 		Policeman policeman2 = new Policeman("policeman 2", 2);
-		Vehicle<Policeman> policeCar = new PoliceCar(1);
+		Vehicle<Policeman> policeCar = new PoliceCar<Policeman>(1);
 		policeCar.getOn(policeman1);
 		assertThrows(VehicleException.class, () -> {
 			policeCar.getOn(policeman2);
 		});
 	}
 
-	// firemen test
+	// firetruck test
 	@Test
 	void fireTruck_allFiremenPassengers_fireTruckWithFiremen() {
 		List<Human> passengers = new ArrayList<>();
 		Human fireman1 = new Fireman("fireman 1", 1);
 		Human fireman2 = new Fireman("fireman 2", 2);
 		Human fireman3 = new Fireman("fireman 3", 3);
+
 		passengers.add(fireman1);
 		passengers.add(fireman2);
 		passengers.add(fireman3);
+
 		Vehicle<Fireman> fireTruck = new FireTruck(3, passengers);
 		assertEquals(passengers, fireTruck.getPassengers());
 	}

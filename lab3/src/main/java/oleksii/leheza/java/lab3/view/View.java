@@ -4,11 +4,14 @@ import java.util.List;
 
 import oleksii.leheza.java.lab3.controller.Controller;
 import oleksii.leheza.java.lab3.entities.Shape;
-import oleksii.leheza.java.lab3.model.Model;
 
 public class View {
 
-	Controller controller = new Controller();
+	private Controller controller;
+
+	public View() {
+		controller = new Controller();
+	}
 
 	public void showShapes() {
 		List<Shape> shapes = controller.getShapes();
@@ -22,7 +25,7 @@ public class View {
 	}
 
 	public void drawShape(int id) {
-		controller.drawShape(id);
+		System.out.println(controller.getShapeById(id));
 	}
 
 	public void showArea(int id) {
@@ -30,8 +33,7 @@ public class View {
 	}
 
 	public void shapesSum(int id) {
-		Model model = new Model();
-		System.out.println(model.getShape(id).calcArea());
+		System.out.println(controller.getShapeById(id).calcArea());
 	}
 
 	public void showOneFigureTypeAreas(String figureType) {

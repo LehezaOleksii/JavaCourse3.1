@@ -16,8 +16,8 @@ public class Main {
 
 	public static void main(String[] args) {
 		Vehicle<Human> bus = new Bus<>(12, getPassengersToBus());
-		Vehicle<Fireman> fireTruck = new FireTruck(8, getPassengersToFireTruck());
-		Vehicle<Policeman> policeCar = new PoliceCar(4, getPassengersToPoliceCar());
+		Vehicle<Fireman> fireTruck = new FireTruck<>(8, getPassengersToFireTruck());
+		Vehicle<Policeman> policeCar = new PoliceCar<>(4, getPassengersToPoliceCar());
 		Vehicle<Human> taxi = new Taxi<>(5, getPassengersToTaxi());
 
 		bus.carryPassengers();

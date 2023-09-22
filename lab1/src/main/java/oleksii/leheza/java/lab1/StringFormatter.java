@@ -2,7 +2,6 @@ package oleksii.leheza.java.lab1;
 
 import java.util.Arrays;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 public class StringFormatter {
 
@@ -18,7 +17,16 @@ public class StringFormatter {
 	}
 
 	private boolean isWordInIncreasingOrder(String word) {
-		return word.length() > 1
-				&& IntStream.range(1, word.length()).allMatch(i -> word.charAt(i) > word.charAt(i - 1));
+		if (word.length() <= 1) {
+			return false;
+		}
+
+		for (int i = 1; i < word.length(); i++) {
+			if (word.charAt(i) <= word.charAt(i - 1)) {
+				return false;
+			}
+		}
+
+		return true;
 	}
 }

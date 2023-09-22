@@ -9,7 +9,7 @@ public class Main {
 	public static void main(String[] args) {
 
 		int numThreads = 20;
-		long iterations = 1_000_000_000L;
+		long iterations = 1000000000L;
 		AtomicLong inCircle = new AtomicLong(0);
 		ParallelMonteCarloPi parallelMonthCarloPi = new ParallelMonteCarloPi();
 		ExecutorService executor = Executors.newFixedThreadPool(numThreads);
