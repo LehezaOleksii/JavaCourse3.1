@@ -34,7 +34,6 @@ public class Main {
 			thread.start();
 		}
 
-		// Чекаємо завершення всіх потоків
 		for (Thread thread : threads) {
 			try {
 				thread.join();
@@ -43,7 +42,6 @@ public class Main {
 			}
 		}
 
-		// Підраховуємо загальний баланс на всіх рахунках
 		System.out.println("\n\n-----------------------\n\n");
 		printAccountsBalances(accounts);
 		int totalBalance = bank.getTotalBalance();
