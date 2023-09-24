@@ -1,4 +1,4 @@
-package oleksii.leheza.java.lab5.filehendlers;
+package oleksii.leheza.java.lab10.filehendlers;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -8,8 +8,8 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-import oleksii.leheza.java.lab5.entities.Shape;
-import oleksii.leheza.java.lab5.main.MyLogger;
+import oleksii.leheza.java.lab10.entities.Shape;
+import oleksii.leheza.java.lab10.main.MyLogger;
 
 public class ShapeSerializable {
 

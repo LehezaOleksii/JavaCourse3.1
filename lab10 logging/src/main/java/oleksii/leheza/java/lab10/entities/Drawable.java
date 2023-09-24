@@ -1,4 +1,4 @@
-package oleksii.leheza.java.lab5.entities;
+package oleksii.leheza.java.lab10.entities;
 
 public interface Drawable {
 

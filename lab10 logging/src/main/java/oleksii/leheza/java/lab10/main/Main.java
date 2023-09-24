@@ -1,13 +1,13 @@
-package oleksii.leheza.java.lab5.main;
+package oleksii.leheza.java.lab10.main;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import oleksii.leheza.java.lab5.entities.Circle;
-import oleksii.leheza.java.lab5.entities.Rectangle;
-import oleksii.leheza.java.lab5.entities.Shape;
-import oleksii.leheza.java.lab5.entities.Triangle;
-import oleksii.leheza.java.lab5.filehendlers.ShapeSerializable;
+import oleksii.leheza.java.lab10.entities.Circle;
+import oleksii.leheza.java.lab10.entities.Rectangle;
+import oleksii.leheza.java.lab10.entities.Shape;
+import oleksii.leheza.java.lab10.entities.Triangle;
+import oleksii.leheza.java.lab10.filehendlers.ShapeSerializable;
 
 public class Main {
 

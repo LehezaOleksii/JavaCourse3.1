@@ -73,3 +73,19 @@
 01:47:01.176 [main] INFO  oleksii.leheza.java.lab5.main.MyLogger - Shapes has been readed
 01:47:01.177 [main] INFO  oleksii.leheza.java.lab5.main.MyLogger - Print readed objects from file serializableFile.txt
 01:47:01.179 [main] INFO  oleksii.leheza.java.lab5.main.MyLogger - End program
+01:59:01.151 [main] INFO  oleksii.leheza.java.lab10.main.MyLogger - RunApplication
+01:59:01.154 [main] INFO  oleksii.leheza.java.lab10.main.MyLogger - Create shapes list
+01:59:01.155 [main] INFO  oleksii.leheza.java.lab10.main.MyLogger - Add shape to list
+01:59:01.157 [main] INFO  oleksii.leheza.java.lab10.main.MyLogger - Shape Triangle was Created
+01:59:01.158 [main] INFO  oleksii.leheza.java.lab10.main.MyLogger - Shape Rectangle was Created
+01:59:01.159 [main] INFO  oleksii.leheza.java.lab10.main.MyLogger - Shape Circle was Created
+01:59:01.159 [main] INFO  oleksii.leheza.java.lab10.main.MyLogger - Shapes was added to the list
+01:59:01.159 [main] INFO  oleksii.leheza.java.lab10.main.MyLogger - Saving shapes to file
+01:59:01.191 [main] INFO  oleksii.leheza.java.lab10.main.MyLogger - Shapes has been saved
+01:59:01.192 [main] INFO  oleksii.leheza.java.lab10.main.MyLogger - Reading objects from file serializableFile.txt
+01:59:01.201 [main] INFO  oleksii.leheza.java.lab10.main.MyLogger - Shape Triangle was Created
+01:59:01.202 [main] INFO  oleksii.leheza.java.lab10.main.MyLogger - Shape Rectangle was Created
+01:59:01.202 [main] INFO  oleksii.leheza.java.lab10.main.MyLogger - Shape Circle was Created
+01:59:01.202 [main] INFO  oleksii.leheza.java.lab10.main.MyLogger - Shapes has been readed
+01:59:01.202 [main] INFO  oleksii.leheza.java.lab10.main.MyLogger - Print readed objects from file serializableFile.txt
+01:59:01.204 [main] INFO  oleksii.leheza.java.lab10.main.MyLogger - End program
