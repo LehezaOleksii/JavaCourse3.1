@@ -9,11 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import oleksii.leheza.java.lab5.entities.Shape;
-import oleksii.leheza.java.lab5.main.Reader;
 
 public class ShapeSerializable {
-
-	private Reader reader = new Reader();
 
 	public void saveShapesToFile(List<Shape> shapes, String filename) {
 		try (ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(filename))) {

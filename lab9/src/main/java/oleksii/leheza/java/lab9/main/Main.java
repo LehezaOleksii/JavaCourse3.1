@@ -17,6 +17,7 @@ public class Main {
 		for (int i = 0; i < numAccounts; i++) {
 			accounts.add(new Account(i, initialBalance));
 		}
+
 		printAccountsBalances(accounts);
 
 		Bank bank = new Bank(accounts);
