@@ -8,12 +8,12 @@ public abstract class Shape implements Drawable {
 
 	Shape() {
 		ShapeColor = "Black";
-		MyLogger.logInfo("Shape " + this.getClass().getSimpleName() + " was Created");
+		MyLogger.logDebug("Shape " + this.getClass().getSimpleName() + " was Created");
 	}
 
 	Shape(String ShapeColor) {
 		this.ShapeColor = ShapeColor;
-		MyLogger.logInfo(
+		MyLogger.logDebug(
 				"Shape " + this.getClass().getSimpleName() + " with color " + this.getShapeColor() + " was Created");
 
 	}

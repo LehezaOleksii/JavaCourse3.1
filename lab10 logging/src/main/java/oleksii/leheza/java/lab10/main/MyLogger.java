@@ -14,4 +14,8 @@ public class MyLogger {
 	public static void logError(String message, Throwable throwable) {
 		logger.error(message, throwable);
 	}
+
+	public static void logDebug(String message) {
+		logger.debug(message);
+	}
 }
