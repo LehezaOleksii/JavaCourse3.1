@@ -1,0 +1,35 @@
+package oleksii.leheza.java.lab5.entities;
+
+import oleksii.leheza.java.lab5.main.MyLogger;
+
+public abstract class Shape implements Drawable {
+
+	private String ShapeColor;
+
+	Shape() {
+		ShapeColor = "Black";
+		MyLogger.logInfo("Shape " + this.getClass().getSimpleName() + " was Created");
+	}
+
+	Shape(String ShapeColor) {
+		this.ShapeColor = ShapeColor;
+		MyLogger.logInfo(
+				"Shape " + this.getClass().getSimpleName() + " with color " + this.getShapeColor() + " was Created");
+
+	}
+
+	public abstract double calcArea();
+
+	public String getShapeColor() {
+		return ShapeColor;
+	}
+
+	public void setShapeColor(String shapeColor) {
+		ShapeColor = shapeColor;
+	}
+
+	@Override
+	public String toString() {
+		return "Shape [ShapeColor=" + ShapeColor + "]";
+	}
+}
