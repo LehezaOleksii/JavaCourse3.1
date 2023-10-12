@@ -21,7 +21,6 @@ public class Main {
 	public static void main(String[] args) {
 		String filename = "text.txt";
 		Reader reader = new Reader();
-		reader.read(filename);
 
 		List<String> listStrings = reader.read(filename);
 		readList(listStrings);

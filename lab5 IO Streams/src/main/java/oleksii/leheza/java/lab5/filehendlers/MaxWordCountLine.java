@@ -6,6 +6,7 @@ import java.util.List;
 public class MaxWordCountLine {
 
 	public String getMaxWordLine(List<String> strings) {
+
 		String maxWordCountLine = "";
 		String line;
 		int maxWordCount = 0;
@@ -20,7 +21,6 @@ public class MaxWordCountLine {
 				maxWordCountLine = line;
 			}
 		}
-
 		return maxWordCountLine;
 	}
 }
