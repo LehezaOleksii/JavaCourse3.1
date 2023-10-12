@@ -1,4 +1,4 @@
-package oleksii.leheza.java.lab10.main;
+package oleksii.leheza.java.lab.lab_10_.main;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

@@ -1,6 +1,6 @@
-package oleksii.leheza.java.lab10.entities;
+package oleksii.leheza.java.lab.lab_10_.entities;
 
-import oleksii.leheza.java.lab10.main.MyLogger;
+import oleksii.leheza.java.lab.lab_10_.main.MyLogger;
 
 public abstract class Shape implements Drawable {
 
