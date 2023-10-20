@@ -14,7 +14,7 @@ public class Main {
 		ParallelMonteCarloPi parallelMonthCarloPi = new ParallelMonteCarloPi();
 		ExecutorService executor = Executors.newFixedThreadPool(numThreads);
 		long startTime = System.currentTimeMillis();
-		parallelMonthCarloPi.calculatePi(numThreads, iterations, inCircle, executor);
+		parallelMonthCarloPi.calculatePi(numThreads, iterations, inCircle);
 		executor.shutdown();
 		while (!executor.isTerminated()) {
 		}

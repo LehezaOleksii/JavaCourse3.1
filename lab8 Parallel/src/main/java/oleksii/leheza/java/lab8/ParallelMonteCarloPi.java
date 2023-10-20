@@ -1,12 +1,12 @@
 package oleksii.leheza.java.lab8;
 
-import java.util.concurrent.ExecutorService;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.atomic.AtomicLong;
 
 public class ParallelMonteCarloPi {
 
-	public void calculatePi(int numThreads, long iterations, AtomicLong inCircle, ExecutorService executor) {
+	public void calculatePi(int numThreads, long iterations, AtomicLong inCircle) {
+
 		Thread[] threads = new Thread[numThreads];
 
 		for (int i = 0; i < numThreads; i++) {
