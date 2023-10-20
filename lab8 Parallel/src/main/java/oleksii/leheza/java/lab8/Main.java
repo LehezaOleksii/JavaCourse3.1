@@ -6,16 +6,12 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		int numThreads = 20;
+		int numThreads = 1;
 		long iterations = 1000000000L;
 		AtomicLong inCircle = new AtomicLong(0);
 		ParallelMonteCarloPi parallelMonthCarloPi = new ParallelMonteCarloPi();
-//		ExecutorService executor = Executors.newFixedThreadPool(numThreads);
 		long startTime = System.currentTimeMillis();
 		parallelMonthCarloPi.calculatePi(numThreads, iterations, inCircle);
-//		executor.shutdown();
-//		while (!executor.isTerminated()) {
-//		}
 		long endTime = System.currentTimeMillis();
 		double pi = (4.0 * inCircle.get()) / iterations;
 
