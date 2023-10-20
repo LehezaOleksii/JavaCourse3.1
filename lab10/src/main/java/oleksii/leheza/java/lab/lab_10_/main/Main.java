@@ -14,25 +14,19 @@ import oleksii.leheza.java.lab.lab_10_.service.ShapeSerializable;
 
 public class Main {
 
-	public static void main(String[] args) { // Створення та ініціалізація рядка літералом
-		// Створення та ініціалізація рядка літералом
+	public static void main(String[] args) {
 		StringBuilder stringBuilder = new StringBuilder("Hello, World!");
 
-		// Ввід рядка з клавіатури
 		StringBuilder inputStringBuilder = new StringBuilder(getInputString());
 
-		// Виведення рядків до зміни
 		System.out.println("Before manipulation:");
 		System.out.println("stringBuilder: " + stringBuilder);
 		System.out.println("inputStringBuilder: " + inputStringBuilder);
 
-		// Зміна значення рядка, який створений літералом
 		setCharAtIndex(stringBuilder, 7, 'X');
 
-		// Зміна значення рядка, який створений введенням з клавіатури
 		setCharAtIndex(inputStringBuilder, 0, 'Y');
 
-		// Виведення рядків після зміни
 		System.out.println("\nAfter manipulation:");
 		System.out.println("stringBuilder: " + stringBuilder);
 		System.out.println("inputStringBuilder: " + inputStringBuilder);
@@ -63,7 +57,7 @@ public class Main {
 		MyLogger.logInfo("End program");
 
 //    task 3  
-		// Вибір мови
+
 		Locale locale = selectLocale();
 		InternationalizationManager.setLocale(locale);
 
