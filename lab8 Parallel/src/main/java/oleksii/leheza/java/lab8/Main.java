@@ -1,7 +1,5 @@
 package oleksii.leheza.java.lab8;
 
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicLong;
 
 public class Main {
@@ -12,12 +10,12 @@ public class Main {
 		long iterations = 1000000000L;
 		AtomicLong inCircle = new AtomicLong(0);
 		ParallelMonteCarloPi parallelMonthCarloPi = new ParallelMonteCarloPi();
-		ExecutorService executor = Executors.newFixedThreadPool(numThreads);
+//		ExecutorService executor = Executors.newFixedThreadPool(numThreads);
 		long startTime = System.currentTimeMillis();
 		parallelMonthCarloPi.calculatePi(numThreads, iterations, inCircle);
-		executor.shutdown();
-		while (!executor.isTerminated()) {
-		}
+//		executor.shutdown();
+//		while (!executor.isTerminated()) {
+//		}
 		long endTime = System.currentTimeMillis();
 		double pi = (4.0 * inCircle.get()) / iterations;
 
